@@ -1,0 +1,250 @@
+/* Original Styles */
+.top-container {
+    background-color: #CEEDC7;
+    position: relative;
+    padding-top: 200px;
+    height: 665px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.middle-container {
+    margin: 100px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.bottom-container {
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+body {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    background-color: #F8F4EA;
+    color: #40514e;
+}
+
+hr {
+    border: dotted lightgrey 6px;
+    border-bottom: none;
+    width: 5%;
+    margin: 100px auto;
+}
+
+a {
+    color: #11999e;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #eaf6f6;
+}
+
+.copyright {
+    color: #eaf6f6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+/* Header tags */
+h1 {
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    color: #66bfbf;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #66bfbf;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999e;
+}
+
+/* Images & Links */
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    animation: floatingCloud 4s infinite ease-in-out;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+    animation: floatingCloud 4s infinite ease-in-out;
+}
+
+.profile-pic {
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.skill-row {
+    width: 50%;
+    text-align: left;
+    margin: 100px auto;
+    line-height: 2;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+.intro {
+    width: 30%;
+    margin: auto;
+    line-height: 2;
+}
+
+.contact-message {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.skill-image1,
+.skill-image2,
+.skill-image3,
+.skill-image4 {
+    width: 25%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-image1:hover,
+.skill-image2:hover,
+.skill-image3:hover,
+.skill-image4:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.footer-link {
+    color: #11999e;
+}
+
+.btn {
+    background: #11cdd4;
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn:hover {
+    background: #30e3cb;
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatingCloud {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Carousel Styles */
+/* .carousel-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-text {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #40514e;
+    margin-top: 10px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.carousel-btn {
+    background: #11cdd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.carousel-btn:hover {
+    background: #11999e;
+} */
