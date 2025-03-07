@@ -98,6 +98,10 @@ h3 {
     transform: scale(1.1);
 }
 
+.middle-container img {
+    cursor: pointer;
+}
+
 .skill-row {
     width: 50%;
     text-align: left;
