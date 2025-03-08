@@ -197,58 +197,189 @@ h3 {
     }
 }
 
-/* Carousel Styles */
-/* .carousel-container {
+.cursor::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Carousel Container */
+.carousel {
     width: 80%;
     margin: auto;
-    overflow: hidden;
     position: relative;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-.carousel-item {
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+/* Individual Slide */
+.carousel div {
     text-align: center;
-    transition: opacity 0.5s ease-in-out;
 }
 
-.carousel-img {
+/* Image Styling */
+.carousel img {
     width: 100%;
-    max-height: 400px;
+    max-width: 500px;
+    /* Limits max width */
+    height: 300px;
+    /* Fixed height for consistency */
     object-fit: cover;
+    /* Ensures no distortion */
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
-.carousel-text {
-    font-size: 1.2rem;
+/* Text Below Image */
+.carousel p {
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     color: #40514e;
     margin-top: 10px;
+    text-align: center;
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
 
-.carousel-btn {
-    background: #11cdd4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin: 5px;
+/* Navigation Arrows */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /* Ensures arrows are fixed to the viewport */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 50px;
+    background: rgba(128, 128, 128, 0.8);
+    /* Greyish background */
     border-radius: 5px;
+    z-index: 9999;
+    /* Ensures it's above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #00000020;
+    /* Subtle border */
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
 }
 
-.carousel-btn:hover {
-    background: #11999e;
+/* Left Arrow */
+.slick-prev {
+    left: 0;
+    /* Stick to the left edge */
+}
+
+/* Right Arrow */
+.slick-next {
+    right: 0;
+    /* Stick to the right edge */
+}
+
+/* Hover Effect */
+.slick-prev:hover,
+.slick-next:hover {
+    background: rgba(80, 80, 80, 0.9);
+}
+
+/* Arrow Icons */
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px;
+    color: white;
+}
+
+/* Adjust for Smaller Screens */
+@media (max-width: 768px) {
+
+    .slick-prev,
+    .slick-next {
+        width: 35px;
+        height: 45px;
+    }
+}
+
+
+/* .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.slick-dots li {
+    margin: 0 4px;
+    width: auto;
+    height: auto;
+}
+
+.slick-dots li button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    line-height: 24px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #66bfbf;
+    color: #fff;
+    transform: scale(1.2);
 } */
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    list-style: none;
+    gap: 8px;
+    /* Adds spacing between numbers */
+}
+
+.slick-dots li {
+    margin: 0;
+}
+
+.slick-dots li button {
+    font-size: 14px;
+    /* Visible number */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Soft transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    /* Soft glassmorphism effect */
+}
+
+.slick-dots li.slick-active button {
+    background-color: #66bfbf;
+    /* Active color */
+    color: #fff;
+    border: 1px solid #66bfbf;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(102, 191, 191, 0.6);
+}
